@@ -1,0 +1,24 @@
+{
+    "name": "jsadditionalstringmethods",
+    "version": "1.0.0",
+    "description": "Additional Methods For JavaScript Inbuilt String Object",
+    "main": "app.js",
+    "scripts": {
+        "test": "jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Samfeolu/JsAdditionalStringMethods.git"
+    },
+    "author": "Adedunye Robert Adedayo",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Samfeolu/JsAdditionalStringMethods/issues"
+    },
+    "homepage": "https://github.com/Samfeolu/JsAdditionalStringMethods#readme",
+    "dependencies": {},
+    "devDependencies": {
+        "@types/jest": "^24.0.12",
+        "jest": "^24.8.0"
+    }
+}
