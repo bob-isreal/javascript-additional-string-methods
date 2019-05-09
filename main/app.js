@@ -16,7 +16,22 @@ String.prototype.toLower = function() {
     return converted;
 };
 String.prototype.ucFirst = function() {
-    return this[0].toUpperCase() + this.substring(1);
+    let solution = this[0].toUpper();
+    for (let index = 1; index < this.length; index++) {
+        solution += this[index].toLower();
+    }
+    return solution;
+};
+
+String.prototype.isQuestion = function() {
+    return /\?$/.test(this);
+};
+String.prototype.words = function() {
+    let pattern = /[a-zA-Z]/g;
+    return this.match(pattern);
+};
+String.prototype.wordCount = function() {
+    return this.words().length;
 };
 
 module.exports = String;

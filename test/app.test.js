@@ -43,32 +43,27 @@ describe('Test For The isQuestion Method', function() {
 
 describe('Test For The words Method', function() {
     test('Should return array of words', function() {
-        expect('This is the day'.words()).toContain([
-            'T',
-            'h',
-            'i',
-            's',
-            'i',
-            's',
-            't',
-            'h',
-            'e',
-            'd',
-            'a',
-            'y'
-        ]);
+        expect('This is the day'.words()).toEqual(
+            expect.arrayContaining([
+                'T',
+                'h',
+                'i',
+                's',
+                'i',
+                's',
+                't',
+                'h',
+                'e',
+                'd',
+                'a',
+                'y'
+            ])
+        );
     });
     test('Should return array of words', function() {
-        expect('Arikeade'.words()).toContain([
-            'A',
-            'r',
-            'i',
-            'k',
-            'e',
-            'a',
-            'd',
-            'e'
-        ]);
+        expect('Arikeade'.words()).toEqual(
+            expect.arrayContaining(['A', 'r', 'i', 'k', 'e', 'a', 'd', 'e'])
+        );
     });
 });
 
