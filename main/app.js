@@ -16,11 +16,7 @@ String.prototype.toLower = function() {
     return converted;
 };
 String.prototype.ucFirst = function() {
-    let solution = this[0].toUpper();
-    for (let index = 1; index < this.length; index++) {
-        solution += this[index].toLower();
-    }
-    return solution;
+    return /[a-zA-Z]/.exec(this)[0] + this.substring(1).toLower();
 };
 
 String.prototype.isQuestion = function() {
