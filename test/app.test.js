@@ -22,7 +22,7 @@ describe('Test For The toLower Method', function() {
         expect('ADEDAYO'.toLower()).toBe('adedayo');
     });
     test('Should return all lower case characters', function() {
-        expect('adedeayo'.toLower()).toBe('adedayo');
+        expect('adedayo'.toLower()).toBe('adedayo');
     });
 });
 
