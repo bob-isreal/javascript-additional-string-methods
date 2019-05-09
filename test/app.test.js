@@ -78,7 +78,7 @@ describe('Test For The wordCount Method', function() {
 
 describe('Test For The toCurrency Method', function() {
     test('Should return currency representation of words', function() {
-        expect('samfeolu'.toCurrency()).toBe('sa,mfe,olu');
+        expect('samfeolu'.toCurrency()).toBe('Invalid Entry');
     });
     test('Should return currency representation of words', function() {
         expect('120000.90'.toCurrency()).toBe('120,000.90');
@@ -90,7 +90,7 @@ describe('Test For The toCurrency Method', function() {
 
 describe('Test For The fromCurrency Method', function() {
     test('Should return words representation of currency', function() {
-        expect('sa,mfe,olu'.fromCurrency()).toBe('samfeolu');
+        expect('sa,mfe,olu'.fromCurrency()).toBe('Invalid Entry');
     });
     test('Should return words representation of currency', function() {
         expect('120,000.90'.fromCurrency()).toBe('120000.90');

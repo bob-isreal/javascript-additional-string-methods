@@ -33,5 +33,19 @@ String.prototype.words = function() {
 String.prototype.wordCount = function() {
     return this.words().length;
 };
+String.prototype.toCurrency = function() {
+    let digitPattern = /^[0-9]+[.]?[0-9]{1,2}$/;
+    console.log(digitPattern.test(this));
 
+    return digitPattern.test(this)
+        ? Number(this)
+              .toFixed(2)
+              .replace(/\d(?=(\d{3})+\.)/g, '$&,')
+        : 'Invalid Entry';
+};
+String.prototype.fromCurrency = function() {
+    let digit = /(\d+,)+/;
+    console.log(digit.test(this));
+    return digit.test(this) ? this.replace(/,(?=\d)/g, '') : 'Invalid Entry';
+};
 module.exports = String;
